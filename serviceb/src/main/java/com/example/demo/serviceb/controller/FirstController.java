@@ -19,7 +19,9 @@ public class FirstController implements FeignProvider {
         RequestAttributes attributes = RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = ((ServletRequestAttributes)attributes).getRequest();
         request.getHeader("relation_id");
+
         System.out.println("b first");
+        System.out.println(request.getHeader("Authorization"));
         return "b";
 
     }
